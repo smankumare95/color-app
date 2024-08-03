@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <title>Color App</title>
+    <style>
+      * {
+        font-family: "Ink Free";
+        font-size: 50px;
+      }
+    </style>
+  </head>
+
+  <body style="background-color: azure">
+    <center>
+      <h1>Color App</h1>
+
+      <form onsubmit="show()">
+        <input type="submit" value="Red" />
+        <input type="submit" value="Green" />
+        <input type="submit" value="Blue" />
+      </form>
+
+      <script>
+        function show() {
+          event.preventDefault();
+          let color = document.activeElement.value;
+          console.log(color);
+
+          if (color === "Red") {
+            document.body.style.backgroundColor = "red";
+          } else if (color === "Green") {
+            document.body.style.backgroundColor = "green";
+          } else if (color === "Blue") {
+            document.body.style.backgroundColor = "blue";
+          }
+        }
+      </script>
+    </center>
+  </body>
+</html>
